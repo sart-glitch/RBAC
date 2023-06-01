@@ -1,0 +1,20 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::860269274803:role/eksctl-5C-Testing-Cluster-Upgrade-NodeInstanceRole-14U59PWK4DFCR
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - userarn: arn:aws:iam::860269274803:user/sarthak-k8s
+      username: sarthak-k8s
+      groups:
+        - Dev-Read-Group
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-05-17T12:41:41Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "1661842"
+  uid: 1f020904-243c-4e0c-a63d-0532b36ff59d
