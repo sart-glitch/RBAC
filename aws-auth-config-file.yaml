@@ -4,10 +4,10 @@ data:
     - groups:
       - system:bootstrappers
       - system:nodes
-      rolearn: arn:aws:iam::860269274803:role/eksctl-5C-Testing-Cluster-Upgrade-NodeInstanceRole-14U59PWK4DFCR
+      rolearn: arn:aws:iam::803:role/eksctl
       username: system:node:{{EC2PrivateDNSName}}
   mapUsers: |
-    - userarn: arn:aws:iam::860269274803:user/sarthak-k8s
+    - userarn: arn:aws:iam::860264803:user/sarthak-k8s
       username: sarthak-k8s
       groups:
         - Dev-Read-Group
